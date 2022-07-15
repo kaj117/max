@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "lkdfd-4ffe"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "lkdfd-4ffe"
+  template:
+    metadata:
+      labels:
+        app: "lkdfd-4ffe"
+    spec:
+      containers:
+        - name: "lkdfd-4ffe"
+          image: "hasiya.azurecr.io/lkdfd"
+          ports:
+          - containerPort: 80
