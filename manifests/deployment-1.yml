@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "tharaka-c757"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "tharaka-c757"
+  template:
+    metadata:
+      labels:
+        app: "tharaka-c757"
+    spec:
+      containers:
+        - name: "tharaka-c757"
+          image: "sandaruwan.azurecr.io/tharaka"
+          ports:
+          - containerPort: 80
